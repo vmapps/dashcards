@@ -91,15 +91,17 @@ def run(args):
 
 #### HTML template
 ```
-<div class="{{ card.plugin }}" id="{{ card.id }}">
-	<p>{{ card.title }}</p>
-	<ul>
-		<li>Plugin name : {{ render.name }}</li>
-		<li>Plugin version : {{ render.version }}</li>
-		<li>Plugin description : {{ render.description }}</li>
-		<li>Plugin argument #0 : {{ render.arg0 }}</li>
-		<li>Plugin argument #1 : {{ render.arg1 }}</li>
-	</ul>
+<div class="col-md-4 {{ card.plugin }}" id="{{ card.id }}">
+	<div class="card">
+		<div class="card-header">{{ card.title }}</div>
+		<div class="card-body">
+			<li>Plugin name : {{ render.name }}</li>
+			<li>Plugin version : {{ render.version }}</li>
+			<li>Plugin description : {{ render.description }}</li>
+			<li>Plugin argument #0 : {{ render.arg0 }}</li>
+			<li>Plugin argument #1 : {{ render.arg1 }}</li>
+		</div>
+	</div>
 </div>
 ```
 
@@ -114,14 +116,16 @@ def run(args):
 
 #### HTML Output
 ```
-<div class="sample" id="e3037fa307254fe0af9b890580434fbf">
-        <p>Test Sample</p>
-        <ul>
-                <li>Plugin name : Sample plugin</li>
-                <li>Plugin version : 0.1</li>
-                <li>Plugin description : Sample plugin for demo</li>
-                <li>Plugin argument #0 : foo</li>
-                <li>Plugin argument #1 : bar</li>
-        </ul>
+<div class="col-md-4 sample" id="ad280ff7d2054d0d808eb5d6e6e7517b">
+	<div class="card">
+		<div class="card-header">Test Sample</div>
+		<div class="card-body">
+			<li>Plugin name : Sample plugin</li>
+			<li>Plugin version : 0.1</li>
+			<li>Plugin description : Sample plugin for demo</li>
+			<li>Plugin argument #0 : foo</li>
+			<li>Plugin argument #1 : bar</li>
+		</div>
+	</div>
 </div>
 ```
