@@ -1,10 +1,17 @@
 <div class="card {{ card.plugin }}" id="{{ card.id }}">
 	<h5 class="card-header">{{ card.title }}</h5>
-	<div class="card-body">
-		<li>Plugin name : {{ render.name }}</li>
-		<li>Plugin version : {{ render.version }}</li>
-		<li>Plugin description : {{ render.description }}</li>
-		<li>Plugin argument #0 : {{ render.arg0 }}</li>
-		<li>Plugin argument #1 : {{ render.arg1 }}</li>
+	<div class="card-body">Plugin items:
+		<li>name : {{ render.name }}</li>
+		<li>version : {{ render.version }}</li>
+		<li>description : {{ render.description }}</li>
+		<li>argument #0 : {{ render.arg0 }}</li>
+		<li>argument #1 : {{ render.arg1 }}</li>
+	</div>
+	<div class="card-footer">Card config:
+		<li>id: {{ card.id }}</li>
+		<li>title: {{ card.title }}</li>
+		<li>plugin: {{ card.plugin }}</li>
+		<li>arguments: {{ card.arguments }}</li>
+		<li>dummy: {{ card.dummy }}</li>
 	</div>
 </div>

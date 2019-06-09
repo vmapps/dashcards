@@ -4,7 +4,8 @@
 		{
 			"title": "Test Sample #1",
 			"plugin": "sample",
-			"arguments": ["foo","bar"]
+			"arguments": ["foo","bar"],
+			"dummy": "foo/bar"
 		},
 		{
 			"title": "Test Sample #2",

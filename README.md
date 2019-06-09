@@ -60,8 +60,8 @@ Two functions are required for each plugin:
 
 #### Rendering
 Jinja2 templating module is used to render HTML :
-- JSON object returned by plugin is sent to template as variable 'render.xxx'
-- other variables are available in templates as 'card.id' (random) and 'card.plugin'/'card.title' (from card config)
+- JSON object returned by plugin is sent to template as variables 'render.xxx'
+- card config is available in templates as variables 'card.xx' + 'card.id' (random)
 
 ## Sample plugin
 #### Python code
@@ -91,16 +91,21 @@ def run(args):
 
 #### HTML template
 ```
-<div class="col-md-4 {{ card.plugin }}" id="{{ card.id }}">
-	<div class="card">
-		<div class="card-header">{{ card.title }}</div>
-		<div class="card-body">
-			<li>Plugin name : {{ render.name }}</li>
-			<li>Plugin version : {{ render.version }}</li>
-			<li>Plugin description : {{ render.description }}</li>
-			<li>Plugin argument #0 : {{ render.arg0 }}</li>
-			<li>Plugin argument #1 : {{ render.arg1 }}</li>
-		</div>
+<div class="card {{ card.plugin }}" id="{{ card.id }}">
+	<h5 class="card-header">{{ card.title }}</h5>
+	<div class="card-body">Plugin items:
+		<li>name : {{ render.name }}</li>
+		<li>version : {{ render.version }}</li>
+		<li>description : {{ render.description }}</li>
+		<li>argument #0 : {{ render.arg0 }}</li>
+		<li>argument #1 : {{ render.arg1 }}</li>
+	</div>
+	<div class="card-footer">Card config:
+		<li>id: {{ card.id }}</li>
+		<li>title: {{ card.title }}</li>
+		<li>plugin: {{ card.plugin }}</li>
+		<li>arguments: {{ card.arguments }}</li>
+		<li>dummy: {{ card.dummy }}</li>
 	</div>
 </div>
 ```
@@ -110,22 +115,28 @@ def run(args):
 {
 	"title": "Test Sample",
 	"plugin": "sample",
-	"arguments": ["foo","bar"]
+	"arguments": ["foo","bar"],
+	"dummy": "foo/bar"
 }
 ```
 
 #### HTML Output
 ```
-<div class="col-md-4 sample" id="ad280ff7d2054d0d808eb5d6e6e7517b">
-	<div class="card">
-		<div class="card-header">Test Sample</div>
-		<div class="card-body">
-			<li>Plugin name : Sample plugin</li>
-			<li>Plugin version : 0.1</li>
-			<li>Plugin description : Sample plugin for demo</li>
-			<li>Plugin argument #0 : foo</li>
-			<li>Plugin argument #1 : bar</li>
-		</div>
-	</div>
+<div class="card sample" id="65f053e29a6043a09fd2b98993d8d91b">
+        <h5 class="card-header">Test Sample</h5>
+        <div class="card-body">Plugin items:
+                <li>name : Sample plugin</li>
+                <li>version : 0.1</li>
+                <li>description : Sample plugin for demo</li>
+                <li>argument #0 : foo</li>
+                <li>argument #1 : bar</li>
+        </div>
+        <div class="card-footer">Card config:
+                <li>id: 65f053e29a6043a09fd2b98993d8d91b</li>
+                <li>title: Test Sample</li>
+                <li>plugin: sample</li>
+                <li>arguments: ['foo', 'bar']</li>
+                <li>dummy: foo/bar</li>
+        </div>
 </div>
 ```
