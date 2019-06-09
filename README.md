@@ -74,7 +74,12 @@ def test():
 	return name + ' - v' + version
 
 def run(args):
-	return { 'name':name, 'version':version, 'description':description, 'arg0':args[0], 'arg1':args[1] }
+	return { 'name':name, 
+			'version':version, 
+			'description':description, 
+			'arg0':args[0], 
+			'arg1':args[1] 
+			}
 ```
 
 ## Plugins sample template

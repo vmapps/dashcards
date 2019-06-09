@@ -14,7 +14,12 @@ def test():
 
 def run(args):
 	
-	res = { 'name':name, 'version':version, 'description':description, 'arg0':args[0], 'arg1':args[1] }
+	return { 'name':name, 
+			'version':version, 
+			'description':description, 
+			'arg0':args[0], 
+			'arg1':args[1] 
+			}
 
 	return res
 	
