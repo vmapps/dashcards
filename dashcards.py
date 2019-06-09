@@ -77,7 +77,7 @@ for c in config['cards']:
 	# run plugin with arguments
 	res = mod.run( arg )
 	# render plugin result using plugin HTML template		
-	out = utils.render( plg, {'id':uid,'title':tit}, res )
+	out = utils.render( plg, {'id':uid,'plugin':plg,'title':tit}, res )
 	# fix HTML block
 	html += out + '\n'
 
