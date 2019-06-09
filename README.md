@@ -55,13 +55,13 @@ Plugins should respect following rules:
 Two functions are required for each plugin:
 - test() : could be executed in debug mode 
 - run() : main plugin function called by main program
-- plugin should return JSON object after execution of run()
-- JSON object returned is then rendered with Jinja2 using plugin HTML template
+- plugin should return a JSON object after execution of run()
+- JSON object is then rendered with Jinja2 using plugin HTML template
 
 #### Rendering
 Jinja2 templating module is used to render HTML :
 - JSON object returned by plugin is sent to template as variable 'render.xxx'
-- some main variables are also available in template : 'card.id' (random) and 'card.title' (fron card config)
+- some main variables are also available in templates as 'card.id' (random) and 'card.title' (from card config)
 
 ## Sample plugin
 #### Python code
@@ -114,11 +114,14 @@ def run(args):
 
 #### HTML Output
 ```
-<div class="weather">
-        <p>Plugin name : Sample plugin</p>
-        <p>Plugin version : 0.1</p>
-        <p>Plugin description : Sample plugin for demo</p>
-        <p>Plugin argument #0 : foo</p>
-        <p>Plugin argument #1 : bar</p>
+<div class="sample" id="e3037fa307254fe0af9b890580434fbf">
+        <p>Test Sample</p>
+        <ul>
+                <li>Plugin name : Sample plugin</li>
+                <li>Plugin version : 0.1</li>
+                <li>Plugin description : Sample plugin for demo</li>
+                <li>Plugin argument #0 : foo</li>
+                <li>Plugin argument #1 : bar</li>
+        </ul>
 </div>
 ```
