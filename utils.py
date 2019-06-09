@@ -9,7 +9,7 @@ import jinja2
 import os
 import pkgutil
 import sys
-
+import __main__
 #
 # global variables
 # --------------------------------------------------
@@ -20,11 +20,10 @@ plugpath = os.path.dirname(__file__)+'/'+plugname
 # debug
 # --------------------------------------------------
 def debug(buffer):
-	# if config['debug']:
-		# sys.stderr.write( '[DEBUG] %s\n'%buffer )
-	# else:
-		# pass
-	pass
+	if __main__.config['debug']:
+		sys.stderr.write( '[DEBUG] %s\n'%buffer )
+	else:
+		pass
 
 #
 # import modules
