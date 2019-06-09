@@ -1,11 +1,9 @@
-<div class="col-md-4 {{ card.plugin }}" id="{{ card.id }}">
-	<div class="card">
-		<div class="card-header bg-secondary text-white">{{ card.title }}</div>
-		<div class="card-body">
-			<p>A = {{ render.arg0 }}</p>
-			<p>B = {{ render.arg1 }}</p>
-			<p>A + B = {{ render.add }}</p>
-			<p>A - B = {{ render.minus }}</p>
-		</div>
+<div class="card {{ card.plugin }}" id="{{ card.id }}">
+	<h5 class="card-header bg-secondary text-white">{{ card.title }}</h5>
+	<div class="card-body text-center">
+		<h2>A={{ render.arg0 }}</h2>
+		<h2>B={{ render.arg1 }}</h1>
+		<h2>A + B = {{ render.add }}</h2>
+		<h2>A - B = {{ render.minus }}</h2>
 	</div>
 </div>

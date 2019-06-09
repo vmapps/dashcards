@@ -1,12 +1,10 @@
-<div class="col-md-4 {{ card.plugin }}" id="{{ card.id }}">
-	<div class="card">
-		<div class="card-header">{{ card.title }}</div>
-		<div class="card-body">
-			<li>Plugin name : {{ render.name }}</li>
-			<li>Plugin version : {{ render.version }}</li>
-			<li>Plugin description : {{ render.description }}</li>
-			<li>Plugin argument #0 : {{ render.arg0 }}</li>
-			<li>Plugin argument #1 : {{ render.arg1 }}</li>
-		</div>
+<div class="card {{ card.plugin }}" id="{{ card.id }}">
+	<h5 class="card-header">{{ card.title }}</h5>
+	<div class="card-body">
+		<li>Plugin name : {{ render.name }}</li>
+		<li>Plugin version : {{ render.version }}</li>
+		<li>Plugin description : {{ render.description }}</li>
+		<li>Plugin argument #0 : {{ render.arg0 }}</li>
+		<li>Plugin argument #1 : {{ render.arg1 }}</li>
 	</div>
 </div>

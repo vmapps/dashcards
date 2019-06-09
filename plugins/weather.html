@@ -1,9 +1,7 @@
-<div class="col-md-4 {{ card.plugin }}" id="{{ card.id }}">
-	<div class="card">
-		<div class="card-header bg-primary text-white">{{ card.title }}</div>
-		<div class="card-body">
-			<h1>{{ render.temperature }} {{ render.units }}</h1>
-			<p>at {{ render.location }}</p>
-		</div>
+<div class="card {{ card.plugin }}" id="{{ card.id }}">
+	<h5 class="card-header bg-primary text-white">{{ card.title }}</h5>
+	<div class="card-body text-center">
+		<span class="display-2">{{ render.temperature }} &deg;{{ render.units }}</span><br/>
+		<span class="display-4">{{ render.location }}</span>
 	</div>
 </div>

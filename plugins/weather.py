@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import json
-
+import random
 name = 'Weather plugin'
 version = '0.1'
 url = 'https://githib.com/vmapps/'
@@ -14,7 +14,11 @@ def test():
 
 def run(args):
 	
-	res = { 'location':args[0], 'temperature':23, 'units':args[1] }
+	temp = 20 + random.randint(0,20)
+	if args[1]=='F':
+		temp = round(temp*9/5+32)
+
+	res = { 'location':args[0], 'temperature':temp, 'units':args[1] }
 
 	return res
 	
