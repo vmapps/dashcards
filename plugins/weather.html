@@ -1,4 +1,9 @@
-<div class="weather" id="{{ card.id }}">
-	<p>{{ card.title }}</p>
-	<p>{{ render.temperature }} {{ render.units }} at {{ render.location }}</p>
+<div class="col-md-4 {{ card.plugin }}" id="{{ card.id }}">
+	<div class="card">
+		<div class="card-header bg-primary text-white">{{ card.title }}</div>
+		<div class="card-body">
+			<h1>{{ render.temperature }} {{ render.units }}</h1>
+			<p>at {{ render.location }}</p>
+		</div>
+	</div>
 </div>
