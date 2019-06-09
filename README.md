@@ -61,7 +61,7 @@ Two functions are required for each plugin:
 #### Rendering
 Jinja2 templating module is used to render HTML :
 - JSON object returned by plugin is sent to template as variable 'render.xxx'
-- some main variables are also available in templates as 'card.id' (random) and 'card.plugin'/'card.title' (from card config)
+- other variables are available in templates as 'card.id' (random) and 'card.plugin'/'card.title' (from card config)
 
 ## Sample plugin
 #### Python code
