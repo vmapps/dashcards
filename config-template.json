@@ -1,0 +1,15 @@
+{
+	"debug": false,
+	"cards": [
+		{
+			"title": "Test Sample #1",
+			"plugin": "sample",
+			"arguments": ["foo","bar"]
+		},
+		{
+			"title": "Test Sample #2",
+			"plugin": "weather",
+			"arguments": ["john","doe"]
+		}
+	]
+}
