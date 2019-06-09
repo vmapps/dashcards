@@ -94,6 +94,15 @@ HTML template
 </div>
 ```
 
+Card configuration
+```
+{
+	"title": "Test Sample",
+	"plugin": "sample",
+	"arguments": ["foo","bar"]
+}
+```
+
 HTML Output
 ```
 <div class="weather">
