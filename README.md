@@ -56,3 +56,34 @@ Two functions are required for each plugin:
 - run() : main plugin function called by main program
 - plugin should return JSON object after execution of run()
 - JSON object returned is then rendered with Jinja2 using plugin HTML template
+
+## Plugins sample code
+```
+#!/usr/bin/env python3
+
+import json
+
+name = 'Sample plugin'
+version = '0.1'
+url = 'https://githib.com/vmapps/'
+author = 'VMapps'
+contact	= '31423375+vmapps@users.noreply.github.com'
+description = 'Sample plugin for demo'
+
+def test():
+	return name + ' - v' + version
+
+def run(args):
+	return { 'name':name, 'version':version, 'description':description, 'arg0':args[0], 'arg1':args[1] }
+```
+
+## Plugins sample template
+```
+<div class="weather">
+	<p>Plugin name : {{ render.name }}</p>
+	<p>Plugin version : {{ render.version }}</p>
+	<p>Plugin description : {{ render.description }}</p>
+	<p>Plugin argument #0 : {{ render.arg0 }}</p>
+	<p>Plugin argument #1 : {{ render.arg1 }}</p>
+</div>
+```
