@@ -58,7 +58,7 @@ Two functions are required for each plugin:
 - JSON object returned is then rendered with Jinja2 using plugin HTML template
 
 ## Sample plugin
-Python code
+###Python code
 ```
 #!/usr/bin/env python3
 
@@ -83,7 +83,7 @@ def run(args):
 			}
 ```
 
-HTML template
+####HTML template
 ```
 <div class="weather">
 	<p>Plugin name : {{ render.name }}</p>
