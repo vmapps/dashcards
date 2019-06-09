@@ -4,12 +4,15 @@
 #
 # imports required modules
 # --------------------------------------------------
+import __main__
+
 import importlib
 import jinja2
 import os
 import pkgutil
 import sys
-import __main__
+import uuid
+
 #
 # global variables
 # --------------------------------------------------
@@ -24,6 +27,11 @@ def debug(buffer):
 		sys.stderr.write( '[DEBUG] %s\n'%buffer )
 	else:
 		pass
+
+#
+# random hash
+def randhash():
+	return uuid.uuid4().hex
 
 #
 # import modules
@@ -46,7 +54,7 @@ def import_plugins():
 #
 # render plugins template
 # --------------------------------------------------
-def render(template,data):
+def render(template,card,render):
 	#
 	# open template file
 	try:
@@ -59,6 +67,6 @@ def render(template,data):
 		sys.exit(1)
 
 	# render template with data
-	html = tpl.render( render=data )
+	html = tpl.render( card=card,render=render )
 
 	return html

@@ -71,10 +71,13 @@ for c in config['cards']:
 	plg = c['plugin']
 	mod = plugins[ plg ]
 	arg = c['arguments']
+	
+	uid = utils.randhash()
+	tit = c['title']
 	# run plugin with arguments
 	res = mod.run( arg )
 	# render plugin result using plugin HTML template		
-	out = utils.render( plg, res )
+	out = utils.render( plg, {'id':uid,'title':tit}, res )
 	# fix HTML block
 	html += out + '\n'
 

@@ -1,3 +1,7 @@
-<div id="calculator">
-	Result is {{ render.add }}
+<div class="calculator" id="{{ card.id }}">
+	<p>{{ card.title }}</p>
+	<p>A = {{ render.arg0 }}</p>
+	<p>B = {{ render.arg1 }}</p>
+	<p>A + B = {{ render.add }}</p>
+	<p>A - B = {{ render.minus }}</p>
 </div>

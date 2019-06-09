@@ -42,7 +42,8 @@ optional arguments:
   -c <filename>  config file name (defaut: config.json)
   -o <filename>  output file name
 ```
-## Plugins structure
+## Plugins 
+#### Structure
 Plugins should respect following rules:
 - been placed into 'plugins' directory
 - plugin code could be named <plugin>.py
@@ -50,15 +51,20 @@ Plugins should respect following rules:
 - have declared (at least) variables named : name, version, url, author, contact, description
 - have declared (at least) functions named : test, run
 
-## Plugins functions
+#### Functions
 Two functions are required for each plugin:
 - test() : could be executed in debug mode 
 - run() : main plugin function called by main program
 - plugin should return JSON object after execution of run()
 - JSON object returned is then rendered with Jinja2 using plugin HTML template
 
+#### Rendering
+Jinja2 templating module is used to render HTML :
+- JSON object returned by plugin is sent to template as variable 'render.xxx'
+- some main variables are also available in template : 'card.id' (random) and 'card.title' (fron card config)
+
 ## Sample plugin
-Python code
+#### Python code
 ```
 #!/usr/bin/env python3
 
@@ -83,18 +89,21 @@ def run(args):
 			}
 ```
 
-HTML template
+#### HTML template
 ```
-<div class="weather">
-	<p>Plugin name : {{ render.name }}</p>
-	<p>Plugin version : {{ render.version }}</p>
-	<p>Plugin description : {{ render.description }}</p>
-	<p>Plugin argument #0 : {{ render.arg0 }}</p>
-	<p>Plugin argument #1 : {{ render.arg1 }}</p>
+<div class="sample" id="{{ card.id }}">
+	<p>{{ card.title }}</p>
+	<ul>
+		<li>Plugin name : {{ render.name }}</li>
+		<li>Plugin version : {{ render.version }}</li>
+		<li>Plugin description : {{ render.description }}</li>
+		<li>Plugin argument #0 : {{ render.arg0 }}</li>
+		<li>Plugin argument #1 : {{ render.arg1 }}</li>
+	</ul>
 </div>
 ```
 
-Card configuration
+#### Card configuration
 ```
 {
 	"title": "Test Sample",
@@ -103,7 +112,7 @@ Card configuration
 }
 ```
 
-HTML Output
+#### HTML Output
 ```
 <div class="weather">
         <p>Plugin name : Sample plugin</p>

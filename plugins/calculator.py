@@ -14,6 +14,10 @@ def test():
 
 def run(args):
 
-	res = { 'add':args[0]+args[1] }
+	res = { 'arg0': args[0],
+			'arg1': args[1],
+			'add': args[0]+args[1],
+			'minus': args[0]-args[1]
+			}
 
 	return res
