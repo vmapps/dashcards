@@ -1,5 +1,5 @@
 # dashcards
-Build HTML dashboard using user-defined cards
+Build HTML dashboard using user-defined cards (bootstrap4 support)
 
 ## Purpose 
 Purpose of this very simple tool is to :
