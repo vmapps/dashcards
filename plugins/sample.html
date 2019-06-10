@@ -1,17 +1,40 @@
 <div class="card {{ card.plugin }}" id="{{ card.id }}">
 	<h5 class="card-header">{{ card.title }}</h5>
-	<div class="card-body">Plugin items:
-		<li>name : {{ render.name }}</li>
-		<li>version : {{ render.version }}</li>
-		<li>description : {{ render.description }}</li>
-		<li>argument #0 : {{ render.arg0 }}</li>
-		<li>argument #1 : {{ render.arg1 }}</li>
+	<div class="card-header">
+		<ul class="nav nav-tabs card-header-tabs" id="sample-list" role="tablist">
+			<li class="nav-item"><a class="nav-link active" href="#vars_plugin" role="tab" aria-controls="vars_plugin" aria-selected="true">Plugin variables</a></li>
+			<li class="nav-item"><a class="nav-link"  href="#vars_config" role="tab" aria-controls="vars_config" aria-selected="false">Config. variables</a></li>
+		</ul>
 	</div>
-	<div class="card-footer">Card config:
-		<li>id: {{ card.id }}</li>
-		<li>title: {{ card.title }}</li>
-		<li>plugin: {{ card.plugin }}</li>
-		<li>arguments: {{ card.arguments }}</li>
-		<li>dummy: {{ card.dummy }}</li>
+	<div class="card-body">
+		<div class="tab-content mt-3">
+			<div class="tab-pane active" id="vars_plugin" role="tabpanel" aria-labelledby="vars_plugin-tab">
+				<h5>Sent by plugin module</h5>
+				<ul>
+					<li>name : {{ render.name }}</li>
+					<li>version : {{ render.version }}</li>
+					<li>description : {{ render.description }}</li>
+					<li>argument #0 : {{ render.arg0 }}</li>
+					<li>argument #1 : {{ render.arg1 }}</li>
+				</ul>
+			</div>
+			<div class="tab-pane" id="vars_config" role="tabpanel" aria-labelledby="vars_config-tab">
+				<h5>Sent by core/config module</h5>
+				<ul>
+					<li>id: {{ card.id }}</li>
+					<li>title: {{ card.title }}</li>
+					<li>plugin: {{ card.plugin }}</li>
+					<li>arguments: {{ card.arguments }}</li>
+					<li>dummy: {{ card.dummy }}</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </div>
+
+<script>
+$('#sample-list a').on('click', function (e) {
+	e.preventDefault()
+	$(this).tab('show')
+})
+</script>
