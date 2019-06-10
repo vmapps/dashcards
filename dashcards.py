@@ -14,6 +14,7 @@ import utils
 parser = argparse.ArgumentParser()
 parser.add_argument('-d','--debug', help='force debug mode (not used yet)', default=False, action='store_true')
 parser.add_argument('-c', help='config file name (defaut: config.json)', metavar='<filename>', action='store')
+parser.add_argument('-t', help='templates directory name (defaut: templates)', metavar='<filename>', action='store')
 parser.add_argument('-o', help='output file name', metavar='<filename>', action='store')
 args = parser.parse_args()
 
@@ -21,6 +22,7 @@ args = parser.parse_args()
 # checks arguments and options
 
 file_cfg = args.c if args.c else os.path.dirname(__file__) + '/config.json'
+dir_tmpl = args.t if args.t else os.path.dirname(__file__) + '/templates'
 file_out = args.o if args.o else None
 
 #
@@ -47,7 +49,7 @@ if config['debug']:
 
 #
 # HTML header
-html = utils.getfile('templates/_header.html')
+html = utils.getfile(dir_tmpl+'/_header.html')
 
 #
 # run plugins defined in cards and render HTML
@@ -66,13 +68,13 @@ for c in config['cards']:
 	res = mod.run( arg )
 	# render plugin result using plugin HTML template		
 	# out = utils.render( plg, {'id':uid,'plugin':plg,'title':tit}, res )
-	out = utils.render( plg, c, res )
+	out = utils.render( plugpath+'/'+plg+'.html', c, res )
 	# fix HTML block
 	html += out + '\n'
 
 #
 # HTML footer
-html += utils.getfile('templates/_footer.html')
+html += utils.getfile(dir_tmpl+'/_footer.html')
 
 #
 # output option set then write HTML content to file

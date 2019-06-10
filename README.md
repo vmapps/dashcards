@@ -7,7 +7,7 @@ Purpose of this very simple tool is to :
 - cards are kind of plugins that user can develop
 - cards can be called multiple times
 This small project has been first been developed to build a dashboard 
-to Raspberry PI devicesm, to run it through crontab and to share the
+to Raspberry PI devices, to run it through crontab and to share the
 HTML page using a standard web server.
 
 ## Requirements
@@ -37,12 +37,13 @@ mv config-template.json config.json
 ```
 ## Usage
 ```
-usage: dashcards.py [-h] [-d] [-c <filename>] [-o <filename>]
+usage: dashcards.py [-h] [-d] [-c <filename>] [-t <filename>] [-o <filename>]
 
 optional arguments:
   -h, --help     show this help message and exit
   -d, --debug    force debug mode (not used yet)
   -c <filename>  config file name (defaut: config.json)
+  -t <filename>  templates directory name (defaut: templates)
   -o <filename>  output file name
 ```
 ## Plugins 

@@ -18,7 +18,6 @@ import uuid
 # --------------------------------------------------
 plugname = 'plugins'
 plugpath = os.path.dirname(__file__)+'/'+plugname
-tmplpath = os.path.dirname(__file__)+'/templates'
 
 #
 # debug
@@ -71,7 +70,7 @@ def import_plugins():
 def render(template,card,render):
 	#
 	# open template file
-	tpl = jinja2.Template( getfile(tmplpath+'/'+template+'.html') )
+	tpl = jinja2.Template( template )
 
 	# render template with data
 	html = tpl.render( card=card,render=render )
