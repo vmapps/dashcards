@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Header -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<!-- Header -->
+
+<!-- Style -->
+<style>
+.card {
+}
+</style>
+<!-- Style -->
+
+<!-- Body -->
+<body>
+
+	<!-- Container -->
+	<div class="container">
+
+		<div class="jumbotron">
+			<h1>DashCards</h1> 
+			<p>Create simple dashboard using your own cards</p> 
+		</div>
+
+		<!-- Row -->
+		<div class="row">
+	
+<!-- Plugin sample id=b1615218d1b044e794dfd14d8f470c53 -->
+<div class="col"><div class="card m-2 plugin_sample" id="b1615218d1b044e794dfd14d8f470c53" style="width: 25rem;">
+	<h5 class="card-header">Plugin Sample</h5>
+	<div class="card-header">
+		<ul class="nav nav-tabs card-header-tabs" id="sample-list" role="tablist">
+			<li class="nav-item"><a class="nav-link active" href="#vars_plugin" role="tab" aria-controls="vars_plugin" aria-selected="true">Plugin variables</a></li>
+			<li class="nav-item"><a class="nav-link"  href="#vars_config" role="tab" aria-controls="vars_config" aria-selected="false">Config. variables</a></li>
+		</ul>
+	</div>
+	<div class="card-body">
+		<div class="tab-content mt-3">
+			<div class="tab-pane active" id="vars_plugin" role="tabpanel" aria-labelledby="vars_plugin-tab">
+				<h5>Sent by plugin module</h5>
+				<ul>
+					<li>name : Sample plugin</li>
+					<li>version : 0.1</li>
+					<li>description : Sample plugin for demo</li>
+					<li>argument #0 : foo</li>
+					<li>argument #1 : bar</li>
+				</ul>
+			</div>
+			<div class="tab-pane" id="vars_config" role="tabpanel" aria-labelledby="vars_config-tab">
+				<h5>Sent by core/config module</h5>
+				<ul>
+					<li>id: b1615218d1b044e794dfd14d8f470c53</li>
+					<li>title: Plugin Sample</li>
+					<li>plugin: sample</li>
+					<li>arguments: ['foo', 'bar']</li>
+					<li>dummy: foo/bar</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+$('#sample-list a').on('click', function (e) {
+	e.preventDefault()
+	$(this).tab('show')
+})
+</script></div><!-- Plugin sample id=b1615218d1b044e794dfd14d8f470c53 -->
+
+<!-- Plugin weather id=bd8d2992cbe440ba8244e813aeade8fa -->
+<div class="col"><div class="card m-2 plugin_weather" id="bd8d2992cbe440ba8244e813aeade8fa" style="width: 18rem;">
+	<h5 class="card-header bg-primary text-white">Plugin Weather</h5>
+	<div class="card-body text-center">
+		<span class="display-2">36 &deg;C</span><br/>
+		<span class="display-4">Paris</span>
+	</div>
+</div></div><!-- Plugin weather id=bd8d2992cbe440ba8244e813aeade8fa -->
+
+<!-- Plugin weather id=4c2164dc60cb4c7189a5b557a775a96d -->
+<div class="col"><div class="card m-2 plugin_weather" id="4c2164dc60cb4c7189a5b557a775a96d" style="width: 18rem;">
+	<h5 class="card-header bg-primary text-white">Plugin Weather</h5>
+	<div class="card-body text-center">
+		<span class="display-2">86 &deg;F</span><br/>
+		<span class="display-4">London</span>
+	</div>
+</div></div><!-- Plugin weather id=4c2164dc60cb4c7189a5b557a775a96d -->
+
+<!-- Plugin calculator id=e6953895acb54dc485d262236ba7584e -->
+<div class="col"><div class="card m-2 plugin_calculator" id="e6953895acb54dc485d262236ba7584e">
+	<h5 class="card-header bg-secondary text-white">Plugin Calculator</h5>
+	<div class="card-body text-center">
+		<h1>A=5 , B=3</h1>
+		<span class="display-4">A + B = 8<br/>A - B = 2</span>
+	</div>
+</div></div><!-- Plugin calculator id=e6953895acb54dc485d262236ba7584e -->
+
+<!-- Plugin finance id=53ca3e2d43d14471b52e178ffe38dd18 -->
+<div class="col"><div class="card m-2 plugin_finance" id="53ca3e2d43d14471b52e178ffe38dd18">
+	<h5 class="card-header bg-info text-white">Plugin Finance - Microsoft</h5>
+	<div class="card-body text-center">
+		<span class="display-2">131.43</span><br/>
+		<span class="display-4">MSFT</span>
+	</div>
+</div></div><!-- Plugin finance id=53ca3e2d43d14471b52e178ffe38dd18 -->
+
+<!-- Plugin finance id=f19498b960a24df5a99c4342679dc419 -->
+<div class="col"><div class="card m-2 plugin_finance" id="f19498b960a24df5a99c4342679dc419">
+	<h5 class="card-header bg-info text-white">Plugin Finance - Apple</h5>
+	<div class="card-body text-center">
+		<span class="display-2">193.07</span><br/>
+		<span class="display-4">AAPL</span>
+	</div>
+</div></div><!-- Plugin finance id=f19498b960a24df5a99c4342679dc419 -->
+		<!-- Row -->
+		</div>
+
+	<!-- Container -->
+	</div>
+
+<!-- Footer -->
+<footer class="container page-footer bg-light">
+
+	<!-- Copyright -->
+	<div class="footer-copyright text-center py-3">
+		dashcards - &copy; 2019 - <a href="https://github.com/vmapps/"> VMapps</a>
+	</div>
+	<!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+</body>
+<!-- Body -->
+
+</html>

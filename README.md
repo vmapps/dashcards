@@ -144,3 +144,5 @@ def run(args):
         </div>
 </div>
 ```
+## Plugins 
+![dashcards](samples/dashcards.png)
