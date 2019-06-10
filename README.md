@@ -51,14 +51,14 @@ Plugins should respect following rules:
 - been placed into 'plugins' directory
 - plugin code could be named `<plugin>.py`
 - plugin card could be named `<plugin>.html`
-- have declared (at least) variables named : name, version, url, author, contact, description
-- have declared (at least) functions named : test, run
+- have declared (at least) variables named : `name`, `version`, `url`, `author`, `contact`, `description`
+- have declared (at least) functions named : `test()`, `run()`
 
 #### Functions
 Two functions are required for each plugin:
-- test() : could be executed in debug mode 
-- run() : main plugin function called by main program
-- plugin should return a JSON object after execution of run()
+- `test()` : could be executed in debug mode 
+- `run()` : main plugin function called by main program
+- plugin should return a JSON object after execution of `run()`
 - JSON object is then rendered with Jinja2 using plugin HTML template
 
 #### Rendering
