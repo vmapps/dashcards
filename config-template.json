@@ -26,6 +26,11 @@
 			"title": "Plugin Finance",
 			"plugin": "finance",
 			"arguments": ["Apple","AAPL"]
+		},
+		{
+			"title": "Plugin System",
+			"plugin": "system",
+			"arguments": ["/"]
 		}
 	]
 }
