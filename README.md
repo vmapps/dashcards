@@ -6,6 +6,9 @@ Purpose of this very simple tool is to :
 - build a HTML dashboard using cards 
 - cards are kind of plugins that user can develop
 - cards can be called multiple times
+This small project has been first been developed to build a dashboard 
+to Raspberry PI devicesm, to run it through crontab and to share the
+HTML page using a standard web server.
 
 ## Requirements
 Following python modules are required :
