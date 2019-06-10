@@ -71,7 +71,7 @@ for c in config['cards']:
 	out = utils.render( dir_tmpl+'/'+plg+'.html', c, res )
 	# fix HTML block
 	html += '\n<!-- Plugin %s id=%s -->\n' % (plg,c['id'])
-	html += '<div class="col">'
+	html += '<div class="col m-2">'
 	html += out
 	html += '</div>'
 	html += '<!-- Plugin %s id=%s -->\n' % (plg,c['id'])
