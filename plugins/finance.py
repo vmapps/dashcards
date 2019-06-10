@@ -8,7 +8,7 @@ version = '0.1'
 url = 'https://githib.com/vmapps/'
 author = 'VMapps'
 contact	= '31423375+vmapps@users.noreply.github.com'
-description = 'Sample plugin for demo'
+description = 'Sample to display finance quotes'
 
 def test():
 	return name + ' - v' + version

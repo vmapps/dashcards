@@ -9,7 +9,7 @@ version = '0.1'
 url = 'https://githib.com/vmapps/'
 author = 'VMapps'
 contact	= '31423375+vmapps@users.noreply.github.com'
-description = 'Plugin to display weather card'
+description = 'Plugin to display weather data'
 
 def test():
 	return name + ' - v' + version
