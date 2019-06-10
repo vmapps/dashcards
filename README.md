@@ -144,5 +144,5 @@ def run(args):
         </div>
 </div>
 ```
-## Plugins 
+## Sample 
 ![dashcards](samples/dashcards.png)
