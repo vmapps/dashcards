@@ -1,9 +1,7 @@
-<div class="card {{ card.plugin }}" id="{{ card.id }}">
+<div class="card m-2 plugin_{{ card.plugin }}" id="{{ card.id }}">
 	<h5 class="card-header bg-secondary text-white">{{ card.title }}</h5>
 	<div class="card-body text-center">
-		<h2>A={{ render.arg0 }}</h2>
-		<h2>B={{ render.arg1 }}</h1>
-		<h2>A + B = {{ render.add }}</h2>
-		<h2>A - B = {{ render.minus }}</h2>
+		<h1>A={{ render.arg0 }} , B={{ render.arg1 }}</h1>
+		<span class="display-4">A + B = {{ render.add }}<br/>A - B = {{ render.minus }}</span>
 	</div>
 </div>

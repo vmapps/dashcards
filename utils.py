@@ -70,7 +70,7 @@ def import_plugins():
 def render(template,card,render):
 	#
 	# open template file
-	tpl = jinja2.Template( template )
+	tpl = jinja2.Template( getfile(template) )
 
 	# render template with data
 	html = tpl.render( card=card,render=render )

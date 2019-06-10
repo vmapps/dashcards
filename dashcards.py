@@ -68,9 +68,13 @@ for c in config['cards']:
 	res = mod.run( arg )
 	# render plugin result using plugin HTML template		
 	# out = utils.render( plg, {'id':uid,'plugin':plg,'title':tit}, res )
-	out = utils.render( plugpath+'/'+plg+'.html', c, res )
+	out = utils.render( dir_tmpl+'/'+plg+'.html', c, res )
 	# fix HTML block
-	html += out + '\n'
+	html += '\n<!-- Plugin %s id=%s -->\n' % (plg,c['id'])
+	html += '<div class="col">'
+	html += out
+	html += '</div>'
+	html += '<!-- Plugin %s id=%s -->\n' % (plg,c['id'])
 
 #
 # HTML footer

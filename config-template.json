@@ -2,13 +2,13 @@
 	"debug": false,
 	"cards": [
 		{
-			"title": "Test Sample #1",
+			"title": "Plugin Sample #1",
 			"plugin": "sample",
 			"arguments": ["foo","bar"],
 			"dummy": "foo/bar"
 		},
 		{
-			"title": "Test Sample #2",
+			"title": "Plugin Sample #2",
 			"plugin": "weather",
 			"arguments": ["john","doe"]
 		}
