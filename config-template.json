@@ -2,15 +2,35 @@
 	"debug": false,
 	"cards": [
 		{
-			"title": "Plugin Sample #1",
+			"title": "Plugin Sample",
 			"plugin": "sample",
 			"arguments": ["foo","bar"],
 			"dummy": "foo/bar"
 		},
 		{
-			"title": "Plugin Sample #2",
+			"title": "Plugin Weather",
 			"plugin": "weather",
-			"arguments": ["john","doe"]
+			"arguments": ["Paris","C"]
+		},
+		{
+			"title": "Plugin Weather",
+			"plugin": "weather",
+			"arguments": ["London","F"]
+		},
+		{
+			"title": "Plugin Calculator",
+			"plugin": "calculator",
+			"arguments": [5,3]
+		},
+		{
+			"title": "Plugin Finance",
+			"plugin": "finance",
+			"arguments": ["Microsoft","MSFT"]
+		},
+		{
+			"title": "Plugin Finance",
+			"plugin": "finance",
+			"arguments": ["Apple","AAPL"]
 		}
 	]
 }
