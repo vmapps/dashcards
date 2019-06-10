@@ -50,7 +50,7 @@ optional arguments:
 Plugins should respect following rules:
 - been placed into 'plugins' directory
 - plugin code could be named <plugin>.py
-- plugin card could be name <plugin>.html
+- plugin card could be named <plugin>.html
 - have declared (at least) variables named : name, version, url, author, contact, description
 - have declared (at least) functions named : test, run
 
