@@ -49,8 +49,8 @@ optional arguments:
 #### Structure
 Plugins should respect following rules:
 - been placed into 'plugins' directory
-- plugin code could be named <plugin>.py
-- plugin card could be named <plugin>.html
+- plugin code could be named `<plugin>.py`
+- plugin card could be named `<plugin>.html`
 - have declared (at least) variables named : name, version, url, author, contact, description
 - have declared (at least) functions named : test, run
 
@@ -63,8 +63,8 @@ Two functions are required for each plugin:
 
 #### Rendering
 Jinja2 templating module is used to render HTML :
-- JSON object returned by plugin is sent to template as variables 'render.xxx'
-- card config is available in templates as variables 'card.xx' + 'card.id' (random)
+- JSON object returned by plugin is sent to template as variables `render.xxx`
+- card config is available in templates as variables `card.xx` + `card.id` (random)
 
 ## Sample plugin
 #### Python code
