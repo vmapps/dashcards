@@ -18,6 +18,7 @@ import uuid
 # --------------------------------------------------
 plugname = 'plugins'
 plugpath = os.path.dirname(__file__)+'/'+plugname
+tmplpath = os.path.dirname(__file__)+'/templates'
 
 #
 # debug
@@ -32,6 +33,19 @@ def debug(buffer):
 # random hash
 def randhash():
 	return uuid.uuid4().hex
+
+#
+# read file content
+def getfile(filename):
+	try:
+		with open(filename,'r') as fh:
+			buffer = fh.read()
+		fh.close()
+		return buffer
+	except Exception as e:
+		sys.stderr.write( '[ERROR] reading configuration file %s\n' % file_cfg )
+		sys.stderr.write( '[ERROR] %s\n' % str(e) )
+		sys.exit(1)
 
 #
 # import modules
@@ -57,14 +71,7 @@ def import_plugins():
 def render(template,card,render):
 	#
 	# open template file
-	try:
-		with open(plugpath+'/'+template+'.html','r') as fh:
-			tpl = jinja2.Template(fh.read())
-		fh.close()
-	except Exception as e:
-		sys.stderr.write( '[ERROR] reading template file %s\n' % template )
-		sys.stderr.write( '[ERROR] %s\n' % str(e) )
-		sys.exit(1)
+	tpl = jinja2.Template( getfile(tmplpath+'/'+template+'.html') )
 
 	# render template with data
 	html = tpl.render( card=card,render=render )
