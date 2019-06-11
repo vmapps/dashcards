@@ -56,6 +56,13 @@ optional arguments:
   -t <dirname>   templates directory name (defaut: templates)
   -o <filename>  output file name
 ```
+## Templates
+HTML code to be rendered with plugins is located in `templates` directory. 
+Option `-t` can be used to specify another directory.
+Two optional files could exist in the templates directory:
+- `_header.html` content will be pushed at beginning of the HTML output code
+- `_footer_.html` content will be pushed at end of the HTML output code
+
 ## Plugins 
 #### Structure
 Plugins should respect following rules:
