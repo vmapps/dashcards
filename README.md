@@ -31,19 +31,29 @@ Settings have to be defined using JSON config file :
 	"arguments": [<arguments>,<sent>,<to>,<plugin>]
 }
 ```
+Note that a specific template can be declared in the configuration file to replace `<plugin>.html` (by default).
+Tenmplate name should not contain any extension (.html will be automatically added).
+```
+{
+	"title": "<name of the card>",
+	"plugin": "<plugin to be used>",
+	"arguments": [<arguments>,<sent>,<to>,<plugin>],
+	"template": "sample-alternative"
+}
+```
 Do not forget to rename template file as `config.json`
 ```
 mv config-template.json config.json
 ```
 ## Usage
 ```
-usage: dashcards.py [-h] [-d] [-c <filename>] [-t <filename>] [-o <filename>]
+usage: dashcards.py [-h] [-d] [-c <filename>] [-t <dirname>] [-o <filename>]
 
 optional arguments:
   -h, --help     show this help message and exit
   -d, --debug    force debug mode (not used yet)
   -c <filename>  config file name (defaut: config.json)
-  -t <filename>  templates directory name (defaut: templates)
+  -t <dirname>   templates directory name (defaut: templates)
   -o <filename>  output file name
 ```
 ## Plugins 
@@ -66,6 +76,8 @@ Two functions are required for each plugin:
 Jinja2 templating module is used to render HTML :
 - JSON object returned by plugin is sent to template as variables `render.xxx`
 - card config is available in templates as variables `card.xx` + `card.id` (random)
+- rendering relies on file `<plugin>.html` in templates directory
+- if plugin returns variable `template`in JSON object, it will be used as alternative template
 
 ## Sample plugin
 #### Python code

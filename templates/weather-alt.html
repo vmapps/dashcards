@@ -1,0 +1,7 @@
+<div class="card plugin_{{ card.plugin }}" id="{{ card.id }}" style="width: 20rem;">
+	<h5 class="card-header bg-danger text-white">{{ card.title }}</h5>
+	<div class="card-body text-center">
+		<span class="display-3">{{ render.main.temp|int }}&deg;{{ card.arguments[1] }}<br/>{{ render.main.humidity|int }}%</span><br/>
+		<span class="display-4">{{ render.name }}</span>
+	</div>
+</div>
