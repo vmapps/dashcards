@@ -49,8 +49,8 @@ if config['debug']:
 
 #
 # HTML header
-if os.path.isfile(dir_tmpl+'/_header.html'):
-	html = utils.getfile(dir_tmpl+'/_header.html')
+if os.path.isfile(dir_tmpl+'/_header_.html'):
+	html = utils.getfile(dir_tmpl+'/_header_.html')
 
 #
 # run plugins defined in cards and render HTML
@@ -81,8 +81,8 @@ for c in config['cards']:
 
 #
 # HTML footer
-if os.path.isfile(dir_tmpl+'/_footer.html'):
-	html += utils.getfile(dir_tmpl+'/_footer.html')
+if os.path.isfile(dir_tmpl+'/_footer_.html'):
+	html += utils.getfile(dir_tmpl+'/_footer_.html')
 
 #
 # output option set then write HTML content to file
