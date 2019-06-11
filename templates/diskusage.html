@@ -1,0 +1,19 @@
+<div class="card plugin_{{ card.plugin }}" id="{{ card.id }}" style="width: 20rem;">
+	<h5 class="card-header bg-success text-white"><span class="fa fa-desktop pull-right" aria-hidden="true"></span> {{ card.title }}</h5>
+	<div class="card-body text-center">
+		<table class="table table-sm">
+			<tbody>
+				<tr>
+					<td class="text-center" colspan="2">
+						<span style="font-size:2.6em;">{{ render.used }} {{ render.units }}</span><br/>
+						<span style="font-size:1.2em;">Used at {{ card.arguments[0] }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="text-left bg-secondary text-white"><span style="font-size:1.2em;">Total: {{ render.total }} {{ render.units }}</span></td>
+					<td class="text-right bg-secondary text-white"><span style="font-size:1.2em;">Free: {{ render.free }} {{ render.units }}</span></td>
+				</tr>
+			</tbody>
+		</table>		
+	</div>
+</div>

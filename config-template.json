@@ -29,8 +29,8 @@
 			"arguments": ["Microsoft","MSFT"]
 		},
 		{
-			"title": "Plugin System",
-			"plugin": "system",
+			"title": "Plugin Disk Usage",
+			"plugin": "diskusage",
 			"arguments": ["/"]
 		}
 	]
