@@ -31,8 +31,9 @@ Settings have to be defined using JSON config file :
 	"arguments": [<arguments>,<sent>,<to>,<plugin>]
 }
 ```
-Note: specific template can be defined in configuration file to replace `<plugin>.html` (default).
-Template name should not contain any extension (`.html` will be automatically added).
+Notes: 
+- specific template can be defined in configuration file to replace `<plugin>.html` (default).
+- template name should not contain any extension (`.html` will be automatically added).
 ```
 {
 	"title": "<name of the card>",
@@ -57,7 +58,7 @@ optional arguments:
   -o <filename>  output file name
 ```
 ## Templates
-HTML code to be rendered with plugins is located in `templates` directory.\
+HTML code to be rendered with plugins is located in `templates` directory.
 Option `-t` can be used to specify another directory.\
 Two optional files could exist in the templates directory:
 - `_header.html` content will be pushed at beginning of the HTML output code
