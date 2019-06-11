@@ -1,7 +1,9 @@
 <div class="card plugin_{{ card.plugin }}" id="{{ card.id }}" style="width: 18rem;">
 	<h5 class="card-header bg-danger text-white"><span class="fa fa-desktop pull-right" aria-hidden="true"></span> {{ card.title }}</h5>
 	<div class="card-body text-center">
-		<span class="display-3">{{ render.main.temp|int }}<sup>&deg;{{ card.arguments[1] }}</sup><br/>{{ render.main.humidity|int }}<sup>%</sup></span><br/>
+		<span class="display-4">{{ render.main.temp|int }}<sup>&deg;{{ card.arguments[1] }}</sup> {{ render.main.humidity|int }}<sup>%</sup></span><br/>
 		<span class="display-4">{{ render.name }}</span>
+		<p>&nbsp;</p>
+		<p><kbd><span class="fa fa-exclamation-triangle" aria-hidden= "true"></span> alternative template</kbd></p>
 	</div>
 </div>

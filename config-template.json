@@ -13,6 +13,12 @@
 			"arguments": ["London","F"]
 		},
 		{
+			"title": "Plugin Weather",
+			"plugin": "weather",
+			"arguments": ["London","F"],
+			"template": "weather-alt"
+		},
+		{
 			"title": "Plugin Calculator",
 			"plugin": "calculator",
 			"arguments": [5,3]
@@ -21,11 +27,6 @@
 			"title": "Plugin Finance",
 			"plugin": "finance",
 			"arguments": ["Microsoft","MSFT"]
-		},
-		{
-			"title": "Plugin Finance",
-			"plugin": "finance",
-			"arguments": ["Apple","AAPL"]
 		},
 		{
 			"title": "Plugin System",
