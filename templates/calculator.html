@@ -1,9 +1,7 @@
 <div class="card plugin_{{ card.plugin }}" id="{{ card.id }}">
-	<h5 class="card-header bg-secondary text-white">{{ card.title }}</h5>
+	<h5 class="card-header bg-secondary text-white"><span class="fa fa-desktop pull-right" aria-hidden="true"></span> {{ card.title }}</h5>
 	<div class="card-body text-center">
-		<h1>A = {{ render.arg0 }}</h1>
-		<h1>B = {{ render.arg1 }}</h1>
-		<h1>A + B = {{ render.add }}</h1>
-		<h1>A - B = {{ render.minus }}</h1>
+		<h1>A = {{ render.arg0 }}, B = {{ render.arg1 }}</h1>
+		<h1>A + B = {{ render.add }}<br/>A - B = {{ render.minus }}</h1>
 	</div>
 </div>
